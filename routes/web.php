@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//HomeControllerの中のindexを呼び出している
+Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
