@@ -13,9 +13,9 @@
                <div class="pr-5"><strong>5k</strong> followers</div>
                <div class="pr-5"><strong>50</strong> following</div>
            </div>
-           <div class="pt-4 font-weight-bold">おっす！！！</div>
-           <div>おらは一体どこまで進化させられるんだーー？？</div>
-           <div><a href="#">www.gokugoku.net</a></div>
+           <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+           <div>{{ $user->profile->description }}</div>
+           <div><a href="#">{{ $user->profile->url }}</a></div>
        </div>
    </div>
 
