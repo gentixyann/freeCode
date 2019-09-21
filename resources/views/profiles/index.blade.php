@@ -7,7 +7,10 @@
            <img src="https://vignette.wikia.nocookie.net/dragonball/images/8/82/SS3_FCM.png/revision/latest/scale-to-width-down/323?cb=20160410144508" class="rounded-circle" style="max-height: 300px; width: auto;">
        </div>
        <div class="col-9 pt-5">
-           <div><h1>{{ $user->username }}</h1></div>
+           <div class="d-flex justify-content-between align-items-baseline">
+            <h1>{{ $user->username }}</h1>
+            <a href="#">Add New Post</a>
+          </div>
            <div class="d-flex">
                <div class="pr-5"><strong>500</strong> post</div>
                <div class="pr-5"><strong>5k</strong> followers</div>
