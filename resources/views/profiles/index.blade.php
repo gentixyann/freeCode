@@ -9,7 +9,7 @@
        <div class="col-9 pt-5">
            <div class="d-flex justify-content-between align-items-baseline">
             <h1>{{ $user->username }}</h1>
-            <a href="#">Add New Post</a>
+            <a href="/p/create">Add New Post</a>
           </div>
            <div class="d-flex">
                <div class="pr-5"><strong>500</strong> post</div>
@@ -23,33 +23,17 @@
    </div>
 
    <div class="row pt-5">
-       <div class="col-4 p-3">
-           <img src="https://www.bunkaku.net/wp-content/uploads/2019/03/blog0257-580x400.jpg" class="w-100">
+    @foreach($user->posts as $post)
+
+    <div class="col-4 p-3">
+           <img src="/storage/{{ $post->image }}" class="w-100">
        </div>
-        <div class="col-4 p-3">
-           <img src="https://www.bunkaku.net/wp-content/uploads/2019/03/blog0256-600x317.jpg" class="w-100">
-       </div>
-        <div class="col-4 p-3">
-           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy6pe6GvItDOXvaPUtLYKeh4IcI2AUlqgQOCbQWwr5o86K4Yw4" class="w-100">
-       </div>
-        <div class="col-4 p-3">
-           <img src="https://ryskkbysh.com/wp-content/uploads/2018/07/SnapShot5.jpg" class="w-100">
-       </div>
-        <div class="col-4 p-3">
-           <img src="https://ryskkbysh.com/wp-content/uploads/2018/07/SnapShot-2.jpg" class="w-100">
-       </div>
-        <div class="col-4 p-3">
-           <img src="https://www.bunkaku.net/wp-content/uploads/2019/05/blog0406-600x275.jpg" class="w-100">
-       </div>
-       <div class="col-4 p-3">
-           <img src="https://ryskkbysh.com/wp-content/uploads/2018/07/SnapShot3.jpg" class="w-100">
-       </div>
-       <div class="col-4 p-3">
-           <img src="https://ryskkbysh.com/wp-content/uploads/2018/07/SnapShot4.jpg" class="w-100">
-       </div>
-       <div class="col-4 p-3">
-           <img src="https://hibinokoto.net/wp-content/uploads/2018/03/2018y03m28d_212553305.png" class="w-100">
-       </div>
+
+
+    @endforeach
+
    </div>
+
+
 </div>
 @endsection
