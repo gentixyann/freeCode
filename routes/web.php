@@ -22,5 +22,6 @@ Route::get('/p/create', 'PostsController@create');
 Route::post('/p', 'PostsController@store');
 
 
-//HomeControllerの中のindexを呼び出している
+//ProfilesControllerControllerの中のindexを呼び出している
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
+Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
