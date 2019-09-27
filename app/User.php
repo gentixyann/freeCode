@@ -41,6 +41,8 @@ class User extends Authenticatable
     {
         parent::boot();
         static::created(function ($user) {
+
+            // 設定したusernameがtitleになるように設定
             $user->profile()->create([
                 'title' => $user->username,
             ]);

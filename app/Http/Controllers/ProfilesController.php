@@ -10,7 +10,7 @@ use Intervention\Image\Facades\Image;
 
 class ProfilesController extends Controller
 {
-  
+
   // App\UserのUserとして
      public function index(User $user)
     {
@@ -41,10 +41,14 @@ class ProfilesController extends Controller
             $image->save();
             $imageArray = ['image' => $imagePath];
         }
+
+        // 画像が変更されていなくてもOKにする為に、$imageArray ?? []
         auth()->user()->profile->update(array_merge(
             $data,
             $imageArray ?? []
         ));
+
+        // profileページに戻す
         return redirect("/profile/{$user->id}");
     }
 
