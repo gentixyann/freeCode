@@ -4,7 +4,7 @@
 <div class="container">
    <div class="row">
        <div class="col-3 p-5">
-           <img src="https://vignette.wikia.nocookie.net/dragonball/images/8/82/SS3_FCM.png/revision/latest/scale-to-width-down/323?cb=20160410144508" class="rounded-circle" style="max-height: 300px; width: auto;">
+           <img src="/storage/{{ $user->profile->image }}" class="rounded-circle w-100">
        </div>
        <div class="col-9 pt-5">
            <div class="d-flex justify-content-between align-items-baseline">
