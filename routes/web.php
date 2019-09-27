@@ -11,15 +11,17 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::get('/p/{post}', 'PostsController@show');
+
 Route::get('/p/create', 'PostsController@create');
 Route::post('/p', 'PostsController@store');
+Route::get('/p/{post}', 'PostsController@show');
 
 
 //ProfilesControllerControllerの中のindexを呼び出している
